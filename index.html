@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Zachary Bird</title>
+
+	<!-- Here we include bootstrap. This will be made available to all of the generated HTML/JS that React generates-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.css">
+	 <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	
+	<!-- This is where React will deploy the contents it generates -->
+	<div id="app"></div>
+
+	<!-- All of our JS code will be transpiled into this bundle.js file -->
+	<script>
+		$(document).ready(function(){
+			$('.skillbar').each(function(){
+				$(this).find('.skillbar-bar').animate({
+					width:$(this).attr('data-percent')
+				},6000);
+			});
+		});
+	</script>
+	<script src="bundle.js"></script>
+	
+</body>
+</html>
